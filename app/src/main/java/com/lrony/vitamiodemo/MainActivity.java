@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * by: Lrony
+ * blog: lrony.github.io
+ * date: 2017-06-25
+ */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button mBtnOpenVideoView;

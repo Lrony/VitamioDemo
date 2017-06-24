@@ -14,7 +14,9 @@ import io.vov.vitamio.widget.MediaController;
 import io.vov.vitamio.widget.VideoView;
 
 /**
- * by:Lrony
+ * by: Lrony
+ * blog: lrony.github.io
+ * date: 2017-06-25
  */
 public class VideoViewActivity extends AppCompatActivity implements MediaPlayer.OnPreparedListener
         , MediaPlayer.OnCompletionListener, MediaPlayer.OnErrorListener {
@@ -123,7 +125,7 @@ public class VideoViewActivity extends AppCompatActivity implements MediaPlayer.
         switch (keyCode) {
             case KeyEvent.KEYCODE_BACK:
                 if (null != mVideo) {
-                    Log.d(TAG, "onKeyDown");
+                    // 停止视频播放，并释放资源
                     mVideo.stopPlayback();
                 }
                 break;
