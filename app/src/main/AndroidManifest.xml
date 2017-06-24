@@ -21,7 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".VideoViewActivity"></activity>
+        <activity
+            android:name=".VideoViewActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation">
+
+        </activity>
     </application>
 
 </manifest>
