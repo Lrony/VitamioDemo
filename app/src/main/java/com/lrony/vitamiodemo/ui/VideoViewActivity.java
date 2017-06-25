@@ -10,6 +10,9 @@ import android.view.WindowManager;
 
 import com.lrony.vitamiodemo.R;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import io.vov.vitamio.MediaPlayer;
 import io.vov.vitamio.widget.MediaController;
 import io.vov.vitamio.widget.VideoView;
@@ -72,13 +75,17 @@ public class VideoViewActivity extends AppCompatActivity implements MediaPlayer.
         Log.d(TAG, "initVideo");
 
         mMediaController = new MediaController(this);
-
-        path = Uri.parse("http://he.yinyuetai.com/uploads/videos/common/" +
-                "701E015B8FDBD50FE24A7E50004060C5.mp4");
-
-        mVideo.setVideoURI(path);
         // 设置媒体控制器
         mVideo.setMediaController(mMediaController);
+
+        path = Uri.parse("http://tj.ctfs.ftn.qq.com/ftn_handler/" +
+                "bdbd70aa1c1b5c8fc3aede669f795ef4e510aedfb2bd625b5df306f4ed3989fb641de60ba56ec83ede60efbf3cd3b247d2488118292c3d3616f30941244d45de");
+
+//        HashMap<String, String> options = new HashMap<String, String>();
+//        options.put("FTN5K", "ab9ce114");
+//        mVideo.setVideoURI(path,options);
+
+        mVideo.setVideoURI(path);
         // 设置成撑满全屏
         mVideo.setVideoLayout(VideoView.VIDEO_LAYOUT_STRETCH, 0);
         // 设置视频质量，LOW/MEDIUM/HIGH
@@ -123,6 +130,7 @@ public class VideoViewActivity extends AppCompatActivity implements MediaPlayer.
     @Override
     public boolean onError(MediaPlayer mp, int what, int extra) {
         Log.d(TAG, "onError");
+
         return false;
     }
 
